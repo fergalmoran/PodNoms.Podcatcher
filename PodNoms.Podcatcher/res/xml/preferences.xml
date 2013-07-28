@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/podcasts">
+        <Preference android:title="@string/manage_podcasts">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.podnoms.android.podcatcher"
+                android:targetClass="com.podnoms.android.podcatcher.ui.activities.phone.ActivityManagePodcasts"/>
+        </Preference>
+        <Preference android:title="@string/google_account">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.podnoms.android.podcatcher"
+                android:targetClass="com.podnoms.android.podcatcher.ui.activities.auth.AccountsActivity"/>
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/player_settings">
+        <com.podnoms.android.podcatcher.ui.widgets.preferences.SeekBarPreference
+            android:key="mark_played_at"
+            android:title="@string/mark_played_at"
+            android:summary="@string/mark_played_at_summary"
+            android:defaultValue="95"
+            android:max="100"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/download_settings">
+
+        <ListPreference
+            android:key="download_schedule"
+            android:title="@string/schedule_frequency"
+            android:entries="@array/schedule_times"
+            android:entryValues="@array/schedule_times_values"
+            android:defaultValue="86400000"/>
+
+        <com.podnoms.android.podcatcher.ui.widgets.preferences.TimePreference
+            android:key="download_schedule_start_time"
+            android:layout="@layout/preference_time_preference"
+            android:title="Schedule Start Time"
+            android:defaultValue="00:00"/>
+
+        <com.podnoms.android.podcatcher.ui.widgets.preferences.SeekBarPreference
+            android:key="max_downloads"
+            android:title="@string/max_downloads"
+            android:defaultValue="1"
+            android:max="20"/>
+        <com.podnoms.android.podcatcher.ui.widgets.preferences.SeekBarPreference
+            android:key="max_episodes"
+            android:title="@string/max_episodes"
+            android:defaultValue="5"
+            android:max="20"/>
+        <android.preference.CheckBoxPreference
+            android:key="download_wifi"
+            android:defaultValue="true"
+            android:title="@string/download_wifi"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/debug_settings">
+        <android.preference.CheckBoxPreference
+            android:key="debug_mode"
+            android:defaultValue="false"
+            android:title="@string/debug_mode"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/error_reporting">
+        <CheckBoxPreference
+            android:key="acra.disable"
+            android:title="@string/error_reporting"
+            android:summaryOn="@string/error_disabled"
+            android:summaryOff="@string/error_enabled"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="acra.syslog.enable"
+            android:summaryOn="System logs included"
+            android:summaryOff="System logs excluded"
+            android:title="Include system logs"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="acra.deviceid.enable"
+            android:title="Include device id"
+            android:summaryOn="Enabled"
+            android:summaryOff="Disabled"
+            android:defaultValue="true"/>
+        <EditTextPreference
+            android:key="acra.user.email"
+            android:title="Include my email address"
+            android:summary="If you would be willing to be contacted for help regarding this crash report, please enter your email address here."/>
+        <CheckBoxPreference
+            android:key="acra.alwaysaccept"
+            android:title="Auto send crash reports"
+            android:summaryOn="Enabled"
+            android:summaryOff="Disabled"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

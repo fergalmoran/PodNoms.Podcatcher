@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/header_session"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/body_padding_large"
+            android:paddingRight="@dimen/body_padding_large"
+            android:paddingTop="@dimen/body_padding_medium"
+            android:paddingBottom="@dimen/body_padding_medium">
+        <CheckBox
+                android:id="@+id/star_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:button="@drawable/btn_star"
+                android:clickable="false"
+                android:contentDescription="@string/description_star"
+                android:focusable="false"/>
+        <TextView
+                android:id="@+id/podcast_title"
+                android:layout_toLeftOf="@id/star_button"
+                android:layout_alignParentLeft="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextHeader"
+                android:text="@string/boilerplate_short"/>
+
+        <TextView
+                android:id="@+id/podcast_subtitle"
+                android:layout_below="@id/podcast_title"
+                android:layout_toLeftOf="@id/star_button"
+                android:layout_alignParentLeft="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextHeaderSub"
+                android:text="@string/boilerplate_short"
+                android:layout_alignRight="@+id/star_button"/>
+
+        <TextView
+                android:id="@+id/podcast_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boilerplate_short"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/star_button"
+                android:layout_alignRight="@+id/star_button"
+                android:gravity="center"
+                style="@style/TextHeaderSub"/>
+
+        <WebView
+                android:id="@+id/podcast_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/fragment_audioitemview_fragment_player"
+                android:layout_above="@+id/podcast_date"/>
+
+        <FrameLayout
+                android:id="@+id/fragment_audioitemview_fragment_player"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/podcast_title"
+                android:layout_below="@+id/podcast_subtitle"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

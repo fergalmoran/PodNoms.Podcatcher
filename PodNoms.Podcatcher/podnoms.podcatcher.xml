@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="podnoms.podcatcher" default="all">
+  
+  
+  <property file="podnoms.podcatcher.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="128m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+  </patternset>
+  <patternset id="compiler.excluded">
+    <exclude name="${basedir}/gen/**"/>
+    <exclude name="${basedir}/../lib/android/ActionBarSherlock/library/gen/**"/>
+    <exclude name="${basedir}/../../../../../Development/Android/sdk/extras/google/google_play_services/libproject/google-play-services_lib/gen/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.zip"/>
+    <include name="*.apk"/>
+    <include name="*.war"/>
+    <include name="*.egg"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+    <include name="*.swc"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.android_4.2_platform" value="C:/Program Files (x86)/Java/jdk1.6.0_31/bin"/>
+  <path id="jdk.classpath.android_4.2_platform">
+    <fileset dir="${jdk.home.android_4.2_platform}">
+      <include name="platforms/android-4.2/android.jar"/>
+      <include name="platforms/android-4.2/data/res"/>
+      <include name="tools/support/annotations.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="jdk.bin.android_4.2_google_apis" value="C:/Program Files (x86)/Java/jdk1.6.0_31/bin"/>
+  <path id="jdk.classpath.android_4.2_google_apis">
+    <fileset dir="${jdk.home.android_4.2_google_apis}">
+      <include name="platforms/android-4.2/android.jar"/>
+      <include name="add-ons/addon-google_apis-google-17/libs/effects.jar"/>
+      <include name="add-ons/addon-google_apis-google-17/libs/usb.jar"/>
+      <include name="add-ons/addon-google_apis-google-17/libs/maps.jar"/>
+      <include name="platforms/android-4.2/data/res"/>
+      <include name="tools/support/annotations.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.6}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.6}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.6"/>
+  
+  
+  <!-- Project Libraries -->
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm4-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/../lib/android/ActionBarSherlock/library/module_actionbarsherlock.xml"/>
+  
+  <import file="${basedir}/../../../../../Development/Android/sdk/extras/google/google_play_services/libproject/google-play-services_lib/module_google-play-services_lib.xml"/>
+  
+  <import file="${basedir}/module_podnoms.podcatcher.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.actionbarsherlock, clean.module.google-play-services_lib, clean.module.podnoms.podcatcher" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.actionbarsherlock, compile.module.google-play-services_lib, compile.module.podnoms.podcatcher" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

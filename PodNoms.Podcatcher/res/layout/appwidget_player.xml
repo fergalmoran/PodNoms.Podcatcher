@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/appwidget_player_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/appwidget_bg">
+
+    <ImageView
+            android:layout_gravity="top|right|center"
+            android:id="@+id/downloaded_indicator"
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/indicator_starred"/>
+
+    <LinearLayout
+            android:id="@+id/player_controls"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/btn_player_back"
+                style="@style/PlayerImageButton"
+                android:src="@drawable/player_back"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/player_back"/>
+
+        <ImageView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/appwidget_divider"/>
+
+        <ImageButton
+                android:id="@+id/btn_player_rwnd"
+                style="@style/PlayerImageButton"
+                android:src="@drawable/player_rwnd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/player_rewind"/>
+
+        <ImageView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/appwidget_divider"/>
+
+        <ImageButton
+                android:id="@+id/appwidget_player_play"
+                style="@style/PlayerImageButton"
+                android:src="@drawable/player_play"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/player_play"/>
+
+        <ImageView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/appwidget_divider"/>
+
+        <ImageButton
+                android:id="@+id/btn_player_ffwd"
+                style="@style/PlayerImageButton"
+                android:src="@drawable/player_ffwd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/player_ffwd"/>
+
+        <ImageView
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/appwidget_divider"/>
+
+        <ImageButton
+                android:id="@+id/btn_player_forward"
+                style="@style/PlayerImageButton"
+                android:src="@drawable/player_fwd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/player_forward"/>
+    </LinearLayout>
+
+    <include layout="@layout/include_podcast_entry_desc"/>
+</LinearLayout>

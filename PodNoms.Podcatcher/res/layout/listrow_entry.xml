@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListItemContainer"
+        android:layout_marginLeft="@dimen/list_item_horiz_margin"
+        android:layout_marginRight="@dimen/list_item_horiz_margin"
+        android:layout_marginTop="@dimen/list_item_vert_margin"
+        android:layout_marginBottom="@dimen/list_item_vert_margin"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+            android:layout_gravity="top|right|center"
+            android:id="@+id/downloaded_indicator"
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/indicator_starred"/>
+
+    <LinearLayout
+            android:id="@+id/listrow_entry_played_progress_wrapper"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+        <ImageView
+                android:id="@+id/listrow_entry_played_progress"
+                android:alpha="25"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".75"
+                android:src="@drawable/progress_overlay"
+                android:scaleType="fitXY"/>
+
+        <View
+                android:id="@+id/strut"
+                android:layout_weight=".25"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <include layout="@layout/include_podcast_entry_desc"/>
+</RelativeLayout>

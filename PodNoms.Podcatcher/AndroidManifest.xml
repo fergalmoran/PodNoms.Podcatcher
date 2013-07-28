@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.podnoms.android.podcatcher"
+          android:versionCode="32"
+          android:versionName="1.00.02">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <permission
+        android:name="com.podnoms.android.podcatcher.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.podnoms.android.podcatcher.permission.C2D_MESSAGE"/>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/Theme.Podnoms"
+        android:name="PodNomsApplication">
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <!-- Start of Crittercism.com Code -->
+        <activity android:name="com.crittercism.NotificationActivity"/>
+        <!-- End of Crittercism.com Code -->
+
+        <activity
+            android:name="com.podnoms.android.podcatcher.ui.activities.phone.ActivityPodcasts"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.phone.ActivityEntryList"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data
+                    android:host="com.podnoms.android.data"
+                    android:path="entries"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.podnoms.android.podcatcher.ui.activities.phone.ActivityManagePodcasts"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".ui.activities.phone.ActivityEntryDetails"
+            android:launchMode="singleTop"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ui.activities.phone.ActivityPreferences"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.phone.ActivityManagePodcasts"
+            android:label="@string/app_name"/>
+        <activity
+            android:name=".ui.activities.auth.AccountsActivity"
+            android:label="@string/app_name"/>
+
+        <service
+            android:name=".services.PodcastRSSQueryService"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.podnoms.android.podcatcher.sync"/>
+            </intent-filter>
+        </service>
+        <!-- Widget Support -->
+        <receiver android:name="com.podnoms.android.podcatcher.ui.widgets.home.PodNomsPlayerAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_player"/>
+        </receiver>
+        <receiver android:name=".services.AlarmReceiver"/>
+        <receiver android:name=".aud.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+            </intent-filter>
+        </receiver>
+        <!-- End widget support -->
+        <receiver
+            android:name="com.podnoms.android.podcatcher.services.push.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+                <category android:name="com.podnoms.android.podcatcher"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.push.GCMIntentService"/>
+        <service android:name=".services.PodPlayer"/>
+        <service android:name=".services.DownloadService"/>
+        <service
+            android:name=".aud.MediaPlayerService"
+            android:exported="false"/>
+
+        <provider
+            android:name=".providers.PodNomsProvider"
+            android:authorities="com.podnoms.android.data"
+            android:enabled="true"
+            android:icon="@drawable/ic_launcher"
+            android:exported="true">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+    </application>
+</manifest>

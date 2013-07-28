@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_podnoms.podcatcher" default="compile.module.podnoms.podcatcher">
+  <dirname property="module.podnoms.podcatcher.basedir" file="${ant.file.module_podnoms.podcatcher}"/>
+  
+  <property name="module.jdk.home.podnoms.podcatcher" value="${jdk.home.android_4.2_platform}"/>
+  <property name="module.jdk.bin.podnoms.podcatcher" value="${jdk.bin.android_4.2_platform}"/>
+  <property name="module.jdk.classpath.podnoms.podcatcher" value="jdk.classpath.android_4.2_platform"/>
+  
+  <property name="compiler.args.podnoms.podcatcher" value="${compiler.args}"/>
+  
+  <property name="podnoms.podcatcher.output.dir" value="${module.podnoms.podcatcher.basedir}/out/production/PodNoms.Podcatcher"/>
+  <property name="podnoms.podcatcher.testoutput.dir" value="${module.podnoms.podcatcher.basedir}/out/test/PodNoms.Podcatcher"/>
+  
+  <path id="podnoms.podcatcher.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="podnoms.podcatcher.module.production.classpath">
+    <path refid="${module.jdk.classpath.podnoms.podcatcher}"/>
+    <pathelement location="${basedir}/libs/google-play-services.jar"/>
+    <pathelement location="${basedir}/libs/GoogleAdMobAdsSdk-4.3.1.jar"/>
+    <pathelement location="${basedir}/libs/gson-2.0.jar"/>
+    <pathelement location="${basedir}/libs/gcm.jar"/>
+    <pathelement location="${basedir}/libs/crittercism_v3_0_3_sdkonly.jar"/>
+    <pathelement location="${actionbarsherlock.output.dir}"/>
+    <pathelement location="${basedir}/../lib/android/ActionBarSherlock/library/libs/android-support-v4.jar"/>
+    <pathelement location="${google-play-services_lib.output.dir}"/>
+  </path>
+  
+  <path id="podnoms.podcatcher.runtime.production.module.classpath">
+    <pathelement location="${basedir}/libs/google-play-services.jar"/>
+    <pathelement location="${basedir}/libs/GoogleAdMobAdsSdk-4.3.1.jar"/>
+    <pathelement location="${basedir}/libs/gson-2.0.jar"/>
+    <pathelement location="${basedir}/libs/gcm.jar"/>
+    <pathelement location="${basedir}/libs/crittercism_v3_0_3_sdkonly.jar"/>
+    <path refid="actionbarsherlock.runtime.production.module.classpath"/>
+    <path refid="google-play-services_lib.runtime.production.module.classpath"/>
+    <pathelement location="${podnoms.podcatcher.output.dir}"/>
+  </path>
+  
+  <path id="podnoms.podcatcher.module.classpath">
+    <path refid="${module.jdk.classpath.podnoms.podcatcher}"/>
+    <pathelement location="${basedir}/libs/google-play-services.jar"/>
+    <pathelement location="${basedir}/libs/GoogleAdMobAdsSdk-4.3.1.jar"/>
+    <pathelement location="${basedir}/libs/gson-2.0.jar"/>
+    <pathelement location="${basedir}/libs/gcm.jar"/>
+    <pathelement location="${basedir}/libs/crittercism_v3_0_3_sdkonly.jar"/>
+    <pathelement location="${actionbarsherlock.testoutput.dir}"/>
+    <pathelement location="${actionbarsherlock.output.dir}"/>
+    <pathelement location="${basedir}/../lib/android/ActionBarSherlock/library/libs/android-support-v4.jar"/>
+    <pathelement location="${google-play-services_lib.testoutput.dir}"/>
+    <pathelement location="${google-play-services_lib.output.dir}"/>
+    <pathelement location="${podnoms.podcatcher.output.dir}"/>
+  </path>
+  
+  <path id="podnoms.podcatcher.runtime.module.classpath">
+    <pathelement location="${basedir}/libs/google-play-services.jar"/>
+    <pathelement location="${basedir}/libs/GoogleAdMobAdsSdk-4.3.1.jar"/>
+    <pathelement location="${basedir}/libs/gson-2.0.jar"/>
+    <pathelement location="${basedir}/libs/gcm.jar"/>
+    <pathelement location="${basedir}/libs/crittercism_v3_0_3_sdkonly.jar"/>
+    <path refid="actionbarsherlock.runtime.module.classpath"/>
+    <path refid="google-play-services_lib.runtime.module.classpath"/>
+    <pathelement location="${podnoms.podcatcher.testoutput.dir}"/>
+    <pathelement location="${podnoms.podcatcher.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.podnoms.podcatcher">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.podnoms.podcatcher">
+    <patternset refid="compiler.excluded"/>
+    <patternset refid="excluded.from.module.podnoms.podcatcher"/>
+  </patternset>
+  
+  <path id="podnoms.podcatcher.module.sourcepath">
+    <dirset dir="${module.podnoms.podcatcher.basedir}">
+      <include name="src"/>
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.podnoms.podcatcher" depends="compile.module.podnoms.podcatcher.production,compile.module.podnoms.podcatcher.tests" description="Compile module PodNoms.Podcatcher"/>
+  
+  <target name="compile.module.podnoms.podcatcher.production" depends="register.custom.compilers,compile.module.actionbarsherlock,compile.module.google-play-services_lib" description="Compile module PodNoms.Podcatcher; production classes">
+    <mkdir dir="${podnoms.podcatcher.output.dir}"/>
+    <javac2 destdir="${podnoms.podcatcher.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.podnoms.podcatcher}/javac">
+      <compilerarg line="${compiler.args.podnoms.podcatcher}"/>
+      <bootclasspath refid="podnoms.podcatcher.module.bootclasspath"/>
+      <classpath refid="podnoms.podcatcher.module.production.classpath"/>
+      <src refid="podnoms.podcatcher.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.podnoms.podcatcher"/>
+    </javac2>
+    
+    <copy todir="${podnoms.podcatcher.output.dir}">
+      <fileset dir="${module.podnoms.podcatcher.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.podnoms.podcatcher"/>
+      </fileset>
+      <fileset dir="${module.podnoms.podcatcher.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.podnoms.podcatcher"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.podnoms.podcatcher.tests" depends="register.custom.compilers,compile.module.podnoms.podcatcher.production" description="compile module PodNoms.Podcatcher; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.podnoms.podcatcher" description="cleanup module">
+    <delete dir="${podnoms.podcatcher.output.dir}"/>
+    <delete dir="${podnoms.podcatcher.testoutput.dir}"/>
+  </target>
+</project>

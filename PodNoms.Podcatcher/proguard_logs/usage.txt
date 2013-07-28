@@ -1,0 +1,778 @@
+android.UnusedStub
+com.crittercism.app.Crittercism:
+    public static synchronized varargs boolean init(android.content.Context,java.lang.String,org.json.JSONObject[])
+    public static void sendAppLoadData()
+    public final boolean b()
+    public final boolean c()
+    public final synchronized boolean a(java.lang.Throwable)
+    public final boolean d()
+    public final boolean e()
+    public final boolean h()
+    public final boolean i()
+    public final crittercism.android.i m()
+    public final void a(crittercism.android.i)
+    public final crittercism.android.m n()
+    public final void a(crittercism.android.m)
+    public final crittercism.android.l p()
+    public final void a(crittercism.android.l)
+    private java.lang.String w()
+    private int x()
+    public final java.lang.String r()
+    public static void setOptOutStatus(boolean)
+    private static boolean a(android.content.Context,java.lang.String)
+    public static boolean didCrashOnLastAppLoad()
+    public static void setUsername(java.lang.String)
+    public static void setMetadata(org.json.JSONObject)
+    public static synchronized void leaveBreadcrumb(java.lang.String)
+    static synthetic void v()
+    static synthetic java.lang.String a(com.crittercism.app.Crittercism)
+    static synthetic crittercism.android.b c(com.crittercism.app.Crittercism)
+com.crittercism.app.Crittercism$1
+com.crittercism.app.Crittercism$10
+com.crittercism.app.Crittercism$2
+com.crittercism.app.Crittercism$4
+com.crittercism.app.Crittercism$5
+com.crittercism.app.Crittercism$6
+com.crittercism.app.Crittercism$7
+com.crittercism.app.Crittercism$a
+com.crittercism.app.CrittercismNDK
+com.google.ads.Ad:
+    public abstract boolean isReady()
+    public abstract void loadAd(com.google.ads.AdRequest)
+    public abstract void setAdListener(com.google.ads.AdListener)
+    public abstract void stopLoading()
+com.google.ads.AdActivity:
+    public static final java.lang.String BASE_URL_PARAM
+    public static final java.lang.String HTML_PARAM
+    public static final java.lang.String URL_PARAM
+    public static final java.lang.String INTENT_ACTION_PARAM
+    public static final java.lang.String TYPE_PARAM
+    public static final java.lang.String ORIENTATION_PARAM
+com.google.ads.AdRequest:
+    public static final java.lang.String VERSION
+    public static final java.lang.String LOGTAG
+    173:174:public void setGender(com.google.ads.AdRequest$Gender)
+    184:185:public void setBirthday(java.lang.String)
+    196:197:public void setPlusOneOptOut(boolean)
+    208:209:public void setKeywords(java.util.Set)
+    238:239:public void setExtras(java.util.Map)
+    267:268:public void setLocation(android.location.Location)
+    281:282:public void setTesting(boolean)
+    385:386:public void setTestDevices(java.util.Set)
+com.google.ads.AdSize:
+    38:39:public AdSize(int,int)
+com.google.ads.AdView:
+    237:238:public void destroy()
+    478:482:public boolean isReady()
+    535:536:public void stopLoading()
+com.google.ads.InterstitialAd:
+    private com.google.ads.d a
+    73:74:public InterstitialAd(android.app.Activity,java.lang.String)
+    88:91:public InterstitialAd(android.app.Activity,java.lang.String,boolean)
+    100:100:public boolean isReady()
+    112:113:public void loadAd(com.google.ads.AdRequest)
+    122:135:public void show()
+    146:147:public void setAdListener(com.google.ads.AdListener)
+    156:157:public void stopLoading()
+com.google.ads.R
+com.google.ads.R$attr
+com.google.ads.R$id
+com.google.ads.R$layout
+com.google.ads.a:
+    79:81:private a()
+com.google.ads.aa:
+    18:18:public aa()
+com.google.ads.c:
+    371:387:final void a()
+com.google.ads.d:
+    276:279:public final synchronized void b()
+    464:464:public final synchronized boolean o()
+    777:778:public final synchronized void y()
+    809:816:public final synchronized void z()
+com.google.ads.searchads.SearchAdRequest:
+    88:89:public void setQuery(java.lang.String)
+    98:104:public void setBackgroundColor(int)
+    116:122:public void setBackgroundGradient(int,int)
+    132:133:public void setHeaderTextColor(int)
+    143:144:public void setDescriptionTextColor(int)
+    154:155:public void setAnchorTextColor(int)
+    163:164:public void setFontFace(java.lang.String)
+    173:174:public void setHeaderTextSize(int)
+    184:185:public void setBorderColor(int)
+    192:193:public void setBorderType(com.google.ads.searchads.SearchAdRequest$BorderType)
+    202:203:public void setBorderThickness(int)
+com.google.ads.util.AdUtil:
+    152:154:private AdUtil()
+com.google.ads.util.a:
+    19:21:private a()
+com.google.ads.util.c:
+    26:28:private c()
+com.google.ads.y:
+    11:11:public y()
+com.google.ads.z:
+    156:158:private z()
+com.google.android.gcm.GCMBaseIntentService:
+    public static final java.lang.String TAG
+    private static final java.lang.String WAKELOCK_KEY
+    private static final java.lang.String EXTRA_TOKEN
+com.google.android.gcm.GCMBroadcastReceiver:
+    private static final java.lang.String TAG
+com.google.android.gcm.GCMConstants
+com.google.android.gcm.GCMRegistrar:
+    public static final long DEFAULT_ON_SERVER_LIFESPAN_MS
+    private static final java.lang.String TAG
+    private static final java.lang.String BACKOFF_MS
+    private static final java.lang.String GSF_PACKAGE
+    private static final java.lang.String PREFERENCES
+    private static final int DEFAULT_BACKOFF_MS
+    private static final java.lang.String PROPERTY_REG_ID
+    private static final java.lang.String PROPERTY_APP_VERSION
+    private static final java.lang.String PROPERTY_ON_SERVER
+    private static final java.lang.String PROPERTY_ON_SERVER_EXPIRATION_TIME
+    private static final java.lang.String PROPERTY_ON_SERVER_LIFESPAN
+    264:269:public static synchronized void onDestroy(android.content.Context)
+    385:395:public static void setRegisteredOnServer(android.content.Context,boolean)
+    407:419:public static boolean isRegisteredOnServer(android.content.Context)
+    430:433:public static long getRegisterOnServerLifespan(android.content.Context)
+    442:446:public static void setRegisterOnServerLifespan(android.content.Context,long)
+    505:506:private GCMRegistrar()
+com.google.gson.CamelCaseSeparatorNamingPolicy
+com.google.gson.CompositionFieldNamingPolicy
+com.google.gson.DefaultTypeAdapters
+com.google.gson.DefaultTypeAdapters$DefaultDateTypeAdapter
+com.google.gson.ExposeAnnotationDeserializationExclusionStrategy
+com.google.gson.ExposeAnnotationSerializationExclusionStrategy
+com.google.gson.FieldAttributes:
+    private static final java.lang.String MAX_CACHE_PROPERTY_NAME
+    85:85:public java.lang.Class getDeclaringClass()
+    191:191:java.lang.Object get(java.lang.Object)
+    208:208:java.lang.reflect.Field getFieldObject()
+com.google.gson.FieldNamingPolicy
+com.google.gson.FieldNamingStrategy
+com.google.gson.FieldNamingStrategy2Adapter
+com.google.gson.Gson:
+    static final boolean DEFAULT_JSON_NON_EXECUTABLE
+    private static final java.lang.String JSON_NON_EXECUTABLE_PREFIX
+    380:383:public com.google.gson.JsonElement toJsonTree(java.lang.Object)
+    404:406:public com.google.gson.JsonElement toJsonTree(java.lang.Object,java.lang.reflect.Type)
+    423:426:public java.lang.String toJson(java.lang.Object)
+    445:447:public java.lang.String toJson(java.lang.Object,java.lang.reflect.Type)
+    465:470:public void toJson(java.lang.Object,java.lang.Appendable)
+    490:495:public void toJson(java.lang.Object,java.lang.reflect.Type,java.lang.Appendable)
+    504:520:public void toJson(java.lang.Object,java.lang.reflect.Type,com.google.gson.stream.JsonWriter)
+    530:532:public java.lang.String toJson(com.google.gson.JsonElement)
+    545:550:public void toJson(com.google.gson.JsonElement,java.lang.Appendable)
+    557:565:private com.google.gson.stream.JsonWriter newJsonWriter(java.io.Writer)
+    573:588:public void toJson(com.google.gson.JsonElement,com.google.gson.stream.JsonWriter)
+    608:609:public java.lang.Object fromJson(java.lang.String,java.lang.Class)
+    632:637:public java.lang.Object fromJson(java.lang.String,java.lang.reflect.Type)
+    685:688:public java.lang.Object fromJson(java.io.Reader,java.lang.reflect.Type)
+    757:758:public java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.Class)
+    780:783:public java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.GsonBuilder
+com.google.gson.GsonToMiniGsonTypeAdapterFactory$1:
+    42:42:public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.GsonToMiniGsonTypeAdapterFactory$2:
+    48:48:public com.google.gson.JsonElement serialize(java.lang.Object)
+    51:51:public com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type)
+com.google.gson.InnerClassExclusionStrategy
+com.google.gson.JsonArray:
+    61:62:public void addAll(com.google.gson.JsonArray)
+    70:70:public int size()
+    92:92:public com.google.gson.JsonElement get(int)
+    154:157:public java.math.BigDecimal getAsBigDecimal()
+    171:174:public java.math.BigInteger getAsBigInteger()
+    187:190:public float getAsFloat()
+    227:230:public byte getAsByte()
+    235:238:public char getAsCharacter()
+    251:254:public short getAsShort()
+com.google.gson.JsonDeserializationContext:
+    public abstract java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.JsonDeserializerExceptionWrapper
+com.google.gson.JsonElement:
+    130:133:public com.google.gson.JsonNull getAsJsonNull()
+    211:211:public float getAsFloat()
+    251:251:public byte getAsByte()
+    265:265:public char getAsCharacter()
+    279:279:public java.math.BigDecimal getAsBigDecimal()
+    293:293:public java.math.BigInteger getAsBigInteger()
+    306:306:public short getAsShort()
+com.google.gson.JsonElementVisitor
+com.google.gson.JsonIOException:
+    private static final long serialVersionUID
+    34:35:public JsonIOException(java.lang.String,java.lang.Throwable)
+com.google.gson.JsonObject:
+    68:68:public com.google.gson.JsonElement remove(java.lang.String)
+    79:80:public void addProperty(java.lang.String,java.lang.String)
+    90:91:public void addProperty(java.lang.String,java.lang.Number)
+    101:102:public void addProperty(java.lang.String,java.lang.Boolean)
+    112:113:public void addProperty(java.lang.String,java.lang.Character)
+    122:122:private com.google.gson.JsonElement createJsonElement(java.lang.Object)
+    142:142:public boolean has(java.lang.String)
+    152:156:public com.google.gson.JsonElement get(java.lang.String)
+    166:166:public com.google.gson.JsonPrimitive getAsJsonPrimitive(java.lang.String)
+    176:176:public com.google.gson.JsonArray getAsJsonArray(java.lang.String)
+    186:186:public com.google.gson.JsonObject getAsJsonObject(java.lang.String)
+com.google.gson.JsonParseException:
+    static final long serialVersionUID
+com.google.gson.JsonParser
+com.google.gson.JsonPrimitive:
+    74:76:public JsonPrimitive(java.lang.Character)
+    84:86:JsonPrimitive(java.lang.Object)
+    199:199:public java.math.BigDecimal getAsBigDecimal()
+    210:210:public java.math.BigInteger getAsBigInteger()
+    222:222:public float getAsFloat()
+    244:244:public short getAsShort()
+    260:260:public byte getAsByte()
+    265:265:public char getAsCharacter()
+com.google.gson.JsonSerializationContext:
+    public abstract com.google.gson.JsonElement serialize(java.lang.Object)
+    public abstract com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type)
+com.google.gson.JsonStreamParser
+com.google.gson.JsonSyntaxException:
+    private static final long serialVersionUID
+com.google.gson.LongSerializationPolicy:
+    56:56:public com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LongSerializationPolicy$DefaultStrategy:
+    65:65:public com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LongSerializationPolicy$Strategy:
+    public abstract com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LongSerializationPolicy$StringStrategy:
+    71:71:public com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LowerCamelCaseSeparatorNamingPolicy
+com.google.gson.LowerCaseNamingPolicy
+com.google.gson.LruCache:
+    private static final long serialVersionUID
+com.google.gson.ModifyFirstLetterNamingPolicy
+com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier
+com.google.gson.UpperCamelCaseSeparatorNamingPolicy
+com.google.gson.UpperCaseNamingPolicy
+com.google.gson.VersionConstants
+com.google.gson.VersionExclusionStrategy
+com.google.gson.annotations.Expose
+com.google.gson.annotations.Since
+com.google.gson.annotations.Until
+com.google.gson.internal.$Gson$Preconditions:
+    32:32:public $Gson$Preconditions()
+    47:50:public static void checkState(boolean)
+com.google.gson.internal.$Gson$Types:
+    45:45:private $Gson$Types()
+    276:276:public static boolean isArray(java.lang.reflect.Type)
+com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.$Gson$Types$WildcardTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.ParameterizedTypeHandlerMap:
+    53:55:public synchronized void registerForTypeHierarchy(java.lang.Class,java.lang.Object,boolean)
+    58:76:public synchronized void registerForTypeHierarchy(com.google.gson.internal.Pair,boolean)
+    79:85:private static int getIndexOfAnOverriddenHandler(java.lang.Class,java.util.List)
+    89:97:public synchronized void register(java.lang.reflect.Type,java.lang.Object,boolean)
+    100:129:public synchronized void registerIfAbsent(com.google.gson.internal.ParameterizedTypeHandlerMap)
+    177:177:public synchronized boolean hasSpecificHandlerFor(java.lang.reflect.Type)
+    182:187:private static int getIndexOfSpecificHandlerForTypeHierarchy(java.lang.Class,java.util.List)
+    191:201:public synchronized com.google.gson.internal.ParameterizedTypeHandlerMap copyOf()
+com.google.gson.internal.Primitives:
+    33:33:private Primitives()
+    81:81:public static boolean isWrapperType(java.lang.reflect.Type)
+    114:116:public static java.lang.Class unwrap(java.lang.Class)
+com.google.gson.internal.Streams:
+    35:78:public Streams()
+    71:71:public static java.io.Writer writerForAppendable(java.lang.Appendable)
+com.google.gson.internal.Streams$1
+com.google.gson.internal.Streams$AppendableWriter
+com.google.gson.internal.Streams$AppendableWriter$CurrentWrite
+com.google.gson.internal.bind.JsonElementWriter:
+    163:167:public com.google.gson.stream.JsonWriter value(double)
+    192:192:public void flush()
+com.google.gson.internal.bind.MiniGson:
+    170:170:public java.util.List getFactories()
+com.google.gson.internal.bind.MiniGson$Builder:
+    193:194:public com.google.gson.internal.bind.MiniGson$Builder typeAdapter(com.google.gson.reflect.TypeToken,com.google.gson.internal.bind.TypeAdapter)
+    198:199:public com.google.gson.internal.bind.MiniGson$Builder typeHierarchyAdapter(java.lang.Class,com.google.gson.internal.bind.TypeAdapter)
+com.google.gson.internal.bind.Reflection:
+    21:21:Reflection()
+com.google.gson.internal.bind.TypeAdapter:
+    35:37:public final java.lang.String toJson(java.lang.Object)
+    41:43:public final void write(java.io.Writer,java.lang.Object)
+    46:46:public final java.lang.Object fromJson(java.lang.String)
+    50:52:public final java.lang.Object read(java.io.Reader)
+com.google.gson.internal.bind.TypeAdapters:
+    50:50:private TypeAdapters()
+    687:687:public static com.google.gson.internal.bind.TypeAdapter$Factory newFactory(com.google.gson.reflect.TypeToken,com.google.gson.internal.bind.TypeAdapter)
+com.google.gson.internal.bind.TypeAdapters$20:
+    private static final java.lang.String YEAR
+    private static final java.lang.String MONTH
+    private static final java.lang.String DAY_OF_MONTH
+    private static final java.lang.String HOUR_OF_DAY
+    private static final java.lang.String MINUTE
+    private static final java.lang.String SECOND
+com.google.gson.internal.bind.TypeAdapters$24
+com.google.gson.reflect.TypeToken:
+    113:113:public boolean isAssignableFrom(java.lang.Class)
+    124:141:public boolean isAssignableFrom(java.lang.reflect.Type)
+    154:154:public boolean isAssignableFrom(com.google.gson.reflect.TypeToken)
+    162:179:private static boolean isAssignableFrom(java.lang.reflect.Type,java.lang.reflect.GenericArrayType)
+    189:232:private static boolean isAssignableFrom(java.lang.reflect.Type,java.lang.reflect.ParameterizedType,java.util.Map)
+    241:251:private static boolean typeEquals(java.lang.reflect.ParameterizedType,java.lang.reflect.ParameterizedType,java.util.Map)
+    258:266:private static varargs java.lang.AssertionError buildUnexpectedTypeError(java.lang.reflect.Type,java.lang.Class[])
+    274:274:private static boolean matches(java.lang.reflect.Type,java.lang.reflect.Type,java.util.Map)
+com.google.gson.stream.JsonWriter:
+    173:180:public final void setIndent(java.lang.String)
+    213:214:public final void setHtmlSafe(boolean)
+    221:221:public final boolean isHtmlSafe()
+    229:230:public final void setSerializeNulls(boolean)
+    407:413:public com.google.gson.stream.JsonWriter value(double)
+    456:457:public void flush()
+com.google.gson.stream.MalformedJsonException:
+    private static final long serialVersionUID
+    33:37:public MalformedJsonException(java.lang.String,java.lang.Throwable)
+    39:43:public MalformedJsonException(java.lang.Throwable)
+com.podnoms.android.podcatcher.BuildConfig
+com.podnoms.android.podcatcher.Manifest
+com.podnoms.android.podcatcher.Manifest$permission
+com.podnoms.android.podcatcher.PodNomsApplication:
+    public static final java.lang.String PACKAGE
+    public static final java.lang.String SENDER_ID
+    35:35:public static boolean isHoneycomb()
+    39:39:public static boolean isTablet(android.content.Context)
+    100:100:public static java.lang.String getValidatorServiceAddress()
+com.podnoms.android.podcatcher.PodNomsApplication$DebugSettingsWrapper
+com.podnoms.android.podcatcher.R
+com.podnoms.android.podcatcher.R$anim
+com.podnoms.android.podcatcher.R$array
+com.podnoms.android.podcatcher.R$attr
+com.podnoms.android.podcatcher.R$bool
+com.podnoms.android.podcatcher.R$color
+com.podnoms.android.podcatcher.R$dimen
+com.podnoms.android.podcatcher.R$drawable
+com.podnoms.android.podcatcher.R$id
+com.podnoms.android.podcatcher.R$integer
+com.podnoms.android.podcatcher.R$layout
+com.podnoms.android.podcatcher.R$menu
+com.podnoms.android.podcatcher.R$string
+com.podnoms.android.podcatcher.R$style
+com.podnoms.android.podcatcher.R$styleable
+com.podnoms.android.podcatcher.R$xml
+com.podnoms.android.podcatcher.aud.IMediaPlaybackService$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_openFile
+    static final int TRANSACTION_isPlaying
+    static final int TRANSACTION_stop
+    static final int TRANSACTION_pause
+    static final int TRANSACTION_play
+    static final int TRANSACTION_duration
+    static final int TRANSACTION_position
+    static final int TRANSACTION_seek
+    static final int TRANSACTION_jumpForward
+    static final int TRANSACTION_jumpBackward
+    static final int TRANSACTION_setTrackTitle
+    static final int TRANSACTION_setTrackDescription
+    static final int TRANSACTION_getAudioId
+    static final int TRANSACTION_setAudioId
+    static final int TRANSACTION_setAudioSessionId
+    static final int TRANSACTION_getAudioSessionId
+    static final int TRANSACTION_getTrackTitle
+    static final int TRANSACTION_getTrackDescription
+    static final int TRANSACTION_getPath
+    static final int TRANSACTION_getMediaMountedCount
+com.podnoms.android.podcatcher.aud.IMediaPlaybackService$Stub$Proxy:
+    231:231:public java.lang.String getInterfaceDescriptor()
+com.podnoms.android.podcatcher.aud.MediaButtonIntentReceiver:
+    private static final int MSG_LONGPRESS_TIMEOUT
+    private static final int LONG_PRESS_DELAY
+com.podnoms.android.podcatcher.aud.MediaPlayerService:
+    public static final int NOW
+    public static final int NEXT
+    public static final int LAST
+    public static final int PLAYBACKSERVICE_STATUS
+    public static final int SHUFFLE_NONE
+    public static final int SHUFFLE_NORMAL
+    public static final int SHUFFLE_AUTO
+    public static final int REPEAT_NONE
+    public static final int REPEAT_CURRENT
+    public static final int REPEAT_ALL
+    public static final java.lang.String SERVICECMD
+    public static final java.lang.String CMDNAME
+    public static final java.lang.String CMDTOGGLEPAUSE
+    public static final java.lang.String CMDSTOP
+    public static final java.lang.String CMDPAUSE
+    public static final java.lang.String CMDPLAY
+    public static final java.lang.String CMDPREVIOUS
+    public static final java.lang.String CMDNEXT
+    public static final java.lang.String CMDRWND
+    public static final java.lang.String CMDFFWD
+    public static final java.lang.String PLAYSTATE_CHANGED
+    public static final java.lang.String META_CHANGED
+    public static final java.lang.String TOGGLEPAUSE_ACTION
+    public static final java.lang.String PAUSE_ACTION
+    public static final java.lang.String FFWD_ACTION
+    public static final java.lang.String RWND_ACTION
+    public static final java.lang.String PREVIOUS_ACTION
+    public static final java.lang.String NEXT_ACTION
+    private static final int TRACK_ENDED
+    private static final int RELEASE_WAKELOCK
+    private static final int SERVER_DIED
+    private static final int FOCUSCHANGE
+    private static final int FADEDOWN
+    private static final int FADEUP
+    private static final int TRACK_WENT_TO_NEXT
+    private static final int MAX_HISTORY_SIZE
+    private static final int TRACK_PROGRESS
+    private static final java.lang.String LOGTAG
+    private static final int IDCOLIDX
+    private static final int PODCASTCOLIDX
+    private static final int BOOKMARKCOLIDX
+    android.graphics.Bitmap _albumArt
+    private static final int IDLE_DELAY
+    579:592:private void ensurePlayListCapacity(int)
+    596:620:private void addToPlayList(long[],int)
+    813:829:private boolean wasRecentlyUsed(int,int)
+    852:875:private boolean makeAutoShuffleList()
+com.podnoms.android.podcatcher.aud.MediaPlayerService$MultiPlayer:
+    1109:1110:public void setAudioSessionId(int)
+com.podnoms.android.podcatcher.aud.MediaPlayerService$Shuffler:
+    private int previous
+    842:845:public int nextInt(int)
+com.podnoms.android.podcatcher.aud.RemoteControlClientCompat:
+    private static final java.lang.String TAG
+    96:108:public RemoteControlClientCompat(android.app.PendingIntent,android.os.Looper)
+com.podnoms.android.podcatcher.aud.RemoteControlClientCompat$MetadataEditorCompat:
+    public static final int METADATA_KEY_ARTWORK
+    200:207:public com.podnoms.android.podcatcher.aud.RemoteControlClientCompat$MetadataEditorCompat putBitmap(int,android.graphics.Bitmap)
+    241:248:public void clear()
+com.podnoms.android.podcatcher.aud.RemoteControlHelper:
+    private static final java.lang.String TAG
+    75:85:public static void unregisterRemoteControlClient(android.media.AudioManager,com.podnoms.android.podcatcher.aud.RemoteControlClientCompat)
+com.podnoms.android.podcatcher.auth.AbstractGoogleApiTask:
+    private static final java.lang.String TAG
+    private static final java.lang.String NAME_KEY
+    111:117:private static java.lang.String readResponse(java.io.InputStream)
+    126:127:private java.lang.String getFirstName(java.lang.String)
+com.podnoms.android.podcatcher.providers.DataStore:
+    public static final java.lang.String DATABASE_NAME
+    public static final int DATABASE_VERSION
+    private static final java.lang.String TAG
+    private static final int TEST_RECORD_COUNT
+    private static final boolean SEED_DATA
+com.podnoms.android.podcatcher.providers.PodNomsInterface:
+    public static final java.lang.String AUTHORITY
+    public static final int URI_MATCH_PODCASTS
+    public static final int URI_MATCH_PODCASTENTRIES_ALL
+    public static final int URI_MATCH_PODCASTENTRIES
+    public static final int URI_MATCH_PODCASTENTRY
+    public static final int URI_MATCH_DOWNLOADQUEUE
+    public static final int URI_MATCH_UPDATE_PODCAST
+    public static final int URI_MATCH_SEARCH
+    public static final int URI_MATCH_PODCASTENTRIES_DOWNLOADED
+    public static final int URI_MATCH_PODCASTENTRIES_ALL_LIST
+    public static final int URI_MATCH_PURGE
+    public static final int LOADER_AUDIO_ITEM
+    public static final int LOADER_ENTRY_LIST_DEFAULT
+    public static final int LOADER_ENTRY_LIST_SORT_DATE
+    public static final int LOADER_ENTRY_LIST_SORT_DATE_ASC
+    public static final int LOADER_ENTRY_LIST_SORT_PLAYED
+    public static final int LOADER_ENTRY_LIST_SORT_PLAYED_ASC
+    public static final int LOADER_MANAGE_PODCASTS
+    public static final int LOADER_PODCAST_LIST
+    13:71:public PodNomsInterface()
+com.podnoms.android.podcatcher.providers.PodNomsInterface$Entry:
+    public static final java.lang.String TABLE_NAME
+    private static final java.lang.String PATH_ENTRIES
+    private static final java.lang.String PATH_DOWNLOADED
+    private static final java.lang.String PATH_ALL
+    private static final java.lang.String PATH_DETAILS
+    private static final java.lang.String PATH_PURGE
+    private static final java.lang.String PATH_DOWNLOADQUEUE
+    public static final java.lang.String DEFAULT_SORT_ORDER
+    public static final java.lang.String COLUMN_NAME_PODCASTID
+    public static final java.lang.String COLUMN_NAME_GUID
+    public static final java.lang.String COLUMN_NAME_TITLE
+    public static final java.lang.String COLUMN_NAME_DESCRIPTION
+    public static final java.lang.String COLUMN_NAME_ENCLOSURE
+    public static final java.lang.String COLUMN_NAME_IMAGE
+    public static final java.lang.String COLUMN_NAME_FILE_LENGTH
+    public static final java.lang.String COLUMN_NAME_ENTRY_LENGTH
+    public static final java.lang.String COLUMN_NAME_POSITION
+    public static final java.lang.String COLUMN_NAME_LOCAL_FILE
+    public static final java.lang.String COLUMN_NAME_DOWNLOADED
+    public static final java.lang.String COLUMN_NAME_PLAYCOUNT
+    public static final java.lang.String COLUMN_NAME_PODCAST_TITLE
+    public static final java.lang.String COLUMN_NAME_DATE_CREATED
+    public static final java.lang.String COLUMN_NAME_DATE_UPDATED
+    public static final java.lang.String V_COLUMN_NAME_PERCENTAGE_PLAYED
+    71:71:public PodNomsInterface$Entry()
+    167:180:public static void prune(android.database.sqlite.SQLiteDatabase,java.lang.String,java.lang.Integer)
+    183:190:public static void setListened(android.content.Context,long)
+com.podnoms.android.podcatcher.providers.PodNomsInterface$Podcast:
+    public static final java.lang.String TABLE_NAME
+    private static final java.lang.String PATH_PODCASTS
+    public static final java.lang.String COLUMN_NAME_TITLE
+    public static final java.lang.String COLUMN_NAME_DESCRIPTION
+    public static final java.lang.String COLUMN_NAME_URL
+    public static final java.lang.String COLUMN_NAME_IMAGE
+    public static final java.lang.String COLUMN_NAME_DATE_CREATED
+    public static final java.lang.String COLUMN_NAME_DATE_UPDATED
+    public static final java.lang.String DEFAULT_SORT_ORDER
+    40:40:public PodNomsInterface$Podcast()
+com.podnoms.android.podcatcher.providers.PodNomsInterface$PodcastBase:
+    protected static final java.lang.String SCHEME
+    36:36:public PodNomsInterface$PodcastBase()
+com.podnoms.android.podcatcher.providers.sync.PodNomsSyncAdapter:
+    private static final int MSG_STARTQUERY
+com.podnoms.android.podcatcher.providers.sync.PodNomsSyncOrchestrator:
+    public static final int REQUEST_CODE_RECOVER_FROM_AUTH_ERROR
+    public static final int REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR
+    public static final int RESULT_PLAY_LIB
+    46:61:private void handleAuthorizeResult(int,android.content.Intent)
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler:
+    114:126:public boolean validatePodcastFeed(java.lang.String)
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast:
+    public com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast$ApiPodcastMeta meta
+    final synthetic com.podnoms.android.podcatcher.providers.sync.api.ApiHandler this$0
+    47:60:public ApiHandler$ApiPodcast(com.podnoms.android.podcatcher.providers.sync.api.ApiHandler)
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast$ApiPodcastEntry:
+    final synthetic com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast this$1
+    60:60:public ApiHandler$ApiPodcast$ApiPodcastEntry(com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast)
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiPodcast$ApiPodcastMeta
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiToken:
+    final synthetic com.podnoms.android.podcatcher.providers.sync.api.ApiHandler this$0
+    42:42:public ApiHandler$ApiToken(com.podnoms.android.podcatcher.providers.sync.api.ApiHandler)
+com.podnoms.android.podcatcher.providers.sync.api.ApiHandler$ApiValidatorResult:
+    public int error_count
+    public int warning_count
+    final synthetic com.podnoms.android.podcatcher.providers.sync.api.ApiHandler this$0
+    66:66:public ApiHandler$ApiValidatorResult(com.podnoms.android.podcatcher.providers.sync.api.ApiHandler)
+com.podnoms.android.podcatcher.providers.sync.api.GCMServerInterface
+com.podnoms.android.podcatcher.providers.sync.rss.Channel:
+    private java.lang.String lastBuildDate
+    private java.lang.String docs
+    private java.lang.String language
+    36:36:public java.lang.String getLink()
+    52:52:public java.lang.String getLastBuildDate()
+    56:57:public void setLastBuildDate(java.lang.String)
+    60:60:public java.lang.String getDocs()
+    64:65:public void setDocs(java.lang.String)
+    68:68:public java.lang.String getLanguage()
+    72:73:public void setLanguage(java.lang.String)
+com.podnoms.android.podcatcher.providers.sync.rss.Item:
+    53:53:public java.lang.String getLink()
+    77:78:public void setImage(java.lang.String)
+com.podnoms.android.podcatcher.providers.sync.rss.RssHandler:
+    private static final java.lang.String ITUNES_NAMESPACE
+com.podnoms.android.podcatcher.services.DownloadService:
+    public static final int MESSAGE_STARTDOWNLOAD
+    public static final int MESSAGE_STARTDOWNLOADFOREPISODE
+com.podnoms.android.podcatcher.services.DownloadService$DownloadInfo:
+    long total
+    long current
+com.podnoms.android.podcatcher.services.PodPlayer:
+    public static final int MESSAGE_CONNECT
+    public static final int MESSAGE_DISCONNECT
+    public static final int MESSAGE_PREVIOUS
+    public static final int MESSAGE_REWIND
+    public static final int MESSAGE_PLAY
+    public static final int MESSAGE_PAUSE
+    public static final int MESSAGE_FFWD
+    public static final int MESSAGE_NEXT
+    public static final int MESSAGE_UPDATEPROGRESS
+    public static final int MESSAGE_UPDATEBUFFER
+    public static final int MESSAGE_SETLENGTH
+    public static final int MESSAGE_INFO
+    public static final int MESSAGE_TRACK_LOCATION
+    public static final int MESSAGE_SETPOSITION
+    public static final int MESSAGE_ERROR
+    public static final int MESSAGE_TRACK_NAME
+    public static final int MESSAGE_NEWTRACK
+    private static final int NOTIFIER_ID
+    241:241:public static boolean isRunning()
+com.podnoms.android.podcatcher.services.PodcastRSSQueryService:
+    private static final int TEMP_MAX_ELEMENTS
+    public static final int STATUS_RUNNING
+    public static final int STATUS_FINISHED
+    public static final int STATUS_ERROR
+com.podnoms.android.podcatcher.services.binder.BinderUtils:
+    11:35:public BinderUtils()
+    42:42:public static com.podnoms.android.podcatcher.services.binder.BinderUtils$ServiceToken bindToService(android.app.Activity)
+com.podnoms.android.podcatcher.services.push.GCMHelpers:
+    6:6:public GCMHelpers()
+com.podnoms.android.podcatcher.ui.BaseActivity:
+    24:30:public void show(java.lang.String)
+    60:70:public void showErrorDialog(int)
+com.podnoms.android.podcatcher.ui.BaseActivity$1
+com.podnoms.android.podcatcher.ui.BaseActivity$2
+com.podnoms.android.podcatcher.ui.activities.auth.AccountsActivity:
+    private static final java.lang.String TAG
+    private static final java.lang.String AUTH_COOKIE_NAME
+com.podnoms.android.podcatcher.ui.activities.auth.DeviceRegistrar
+com.podnoms.android.podcatcher.ui.activities.phone.ActivityPodcasts:
+    private static final boolean RUNNING_IN_SERVICE
+    private android.os.Messenger _serviceHandler
+com.podnoms.android.podcatcher.ui.adapters.lazy.FileCache:
+    34:37:public void clear()
+com.podnoms.android.podcatcher.ui.adapters.lazy.ImageLoader:
+    135:136:public void stopThread()
+    209:211:public void clearCache()
+com.podnoms.android.podcatcher.ui.adapters.lazy.LazyAdapter:
+    public abstract android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.podnoms.android.podcatcher.ui.adapters.lazy.MemoryCache:
+    23:24:public void clear()
+com.podnoms.android.podcatcher.ui.adapters.lazy.Utils:
+    6:6:public Utils()
+com.podnoms.android.podcatcher.ui.fragments.FragmentAudioItemView:
+    private android.widget.TextView _txtDownloaded
+com.podnoms.android.podcatcher.ui.fragments.FragmentPlayer:
+    private static final int REFRESH
+    private static final int QUIT
+    private static final int GET_ALBUM_ART
+    private static final int ALBUM_ART_DECODED
+com.podnoms.android.podcatcher.ui.receivers.ErrorReceiver:
+    private static final int NOTIFY_ME_ID
+com.podnoms.android.podcatcher.ui.widgets.AlertDialogs:
+    9:10:public AlertDialogs()
+    24:51:public static void YesNoDialog(android.content.Context,java.lang.String,com.podnoms.android.podcatcher.ui.widgets.AlertDialogs$IAlertDialogActionHandler)
+com.podnoms.android.podcatcher.ui.widgets.AlertDialogs$1
+com.podnoms.android.podcatcher.ui.widgets.AlertDialogs$IAlertDialogActionHandler
+com.podnoms.android.podcatcher.ui.widgets.LockScreenWidgetProvider
+com.podnoms.android.podcatcher.ui.widgets.home.PodNomsPlayerAppWidgetProvider:
+    public static final java.lang.String CMDAPPWIDGETUPDATE
+com.podnoms.android.podcatcher.ui.widgets.preferences.SeekBarPreference:
+    private static final java.lang.String androidns
+    97:98:public void setMax(int)
+    101:101:public int getMax()
+    105:108:public void setProgress(int)
+    111:111:public int getProgress()
+com.podnoms.android.podcatcher.util.DateUtils:
+    public static final java.lang.String PODCAST_DATE_FORMAT
+    15:15:public DateUtils()
+com.podnoms.android.podcatcher.util.DeviceUtils:
+    10:10:public DeviceUtils()
+    40:40:public static android.database.Cursor query(android.content.Context,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)
+    46:55:public static android.database.Cursor query(android.content.Context,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,int)
+com.podnoms.android.podcatcher.util.Downloader:
+    public static final int MAX_BUFFER_SIZE
+    public static final int DOWNLOADING
+    public static final int PAUSED
+    public static final int COMPLETE
+    public static final int CANCELLED
+    public static final int ERROR
+    54:54:public java.lang.String getUrl()
+    59:59:public int getSize()
+    78:80:public void pause()
+    84:88:public void resume(int)
+    92:94:public void cancel()
+    98:100:private void error()
+com.podnoms.android.podcatcher.util.EulaHelper:
+    32:32:public EulaHelper()
+com.podnoms.android.podcatcher.util.FileUtils:
+    6:6:public FileUtils()
+    8:19:public static java.lang.String readFile(java.io.InputStream)
+    44:45:public static void copyFile(java.io.File,java.io.File)
+    63:75:public static java.lang.String getFileContent(java.lang.String)
+    80:88:public static void writeFile(java.lang.String,byte[])
+com.podnoms.android.podcatcher.util.HttpUtils
+com.podnoms.android.podcatcher.util.LogHandler:
+    public static final java.lang.String INTENT_ERROR
+    8:8:public LogHandler()
+com.podnoms.android.podcatcher.util.NetworkUtils:
+    11:11:public NetworkUtils()
+    13:14:public static boolean isOnline()
+com.podnoms.android.podcatcher.util.NotifierHelper:
+    private static final int NOTIFY_1
+    11:11:public NotifierHelper()
+com.podnoms.android.podcatcher.util.RssUtils
+com.podnoms.android.podcatcher.util.RssUtils$1
+com.podnoms.android.podcatcher.util.RssUtils$ValidatorHandler
+com.podnoms.android.podcatcher.util.StringIO
+com.podnoms.android.podcatcher.util.UIHelper:
+    18:25:public void showLoadingDialog(java.lang.String)
+    28:35:public void updateLoadingDialog(java.lang.String)
+    38:41:public boolean isDialogActive()
+    52:57:public void showErrorDialog(java.lang.String)
+com.podnoms.android.podcatcher.util.UIHelper$1
+com.podnoms.android.podcatcher.util.UIHelper$2
+com.podnoms.android.podcatcher.util.UIHelper$3
+com.podnoms.android.podcatcher.util.UIUtils:
+    private static final int BRIGHTNESS_THRESHOLD
+    21:21:public UIUtils()
+    44:44:public static boolean isColorDark(int)
+    52:52:public static boolean isHoneycomb()
+    56:56:public static boolean isTablet(android.content.Context)
+    62:62:public static boolean isHoneycombTablet(android.content.Context)
+    69:69:public static long getCurrentTime(android.content.Context)
+    73:78:public static android.graphics.drawable.Drawable getIconForIntent(android.content.Context,android.content.Intent)
+    82:86:public static java.lang.String humanReadableByteCount(long,boolean)
+    90:90:public static java.lang.CharSequence humanReadableTimeCount(int,int)
+com.podnoms.android.podcatcher.util.state.Constants
+com.podnoms.android.podcatcher.util.state.IStateHandler
+com.podnoms.android.podcatcher.util.state.PersistentStateHandler:
+    22:23:public void putBoolean(java.lang.String,java.lang.Boolean)
+    27:28:public void putFloat(java.lang.String,float)
+    32:33:public void putInt(java.lang.String,int)
+    37:38:public void putLong(java.lang.String,long)
+    52:52:public boolean getBoolean(java.lang.String)
+    57:57:public float getFloat(java.lang.String)
+    67:67:public int getInt(java.lang.String)
+    72:72:public long getLong(java.lang.String)
+    87:87:public boolean has(java.lang.String)
+    92:93:public void remove(java.lang.String)
+com.podnoms.android.podcatcher.util.state.VolatileStateHandler
+crittercism.android.a:
+    public static void a(android.content.Context)
+crittercism.android.a$b:
+    public static void a()
+crittercism.android.b:
+    private final java.lang.String c
+    final java.lang.String a
+    final int b
+    private boolean l
+    private java.lang.String m
+    public b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)
+    public final void a(java.lang.String)
+    public final java.lang.String g()
+    public final void h()
+    private boolean r()
+    public final synchronized boolean b(org.json.JSONObject)
+    public final void c(org.json.JSONObject)
+    public final org.json.JSONObject i()
+crittercism.android.c:
+    private android.content.Context c
+    public c(java.lang.String,android.content.Context)
+crittercism.android.d:
+    public d()
+    public static void a(android.content.Context,java.lang.String,java.lang.String)
+crittercism.android.e:
+    private java.lang.String c
+    public java.lang.String a
+    private int d
+    public java.lang.String b
+    public e()
+    private e(java.lang.String,int,java.lang.String)
+    public static crittercism.android.e a(org.json.JSONObject)
+crittercism.android.f:
+    private static final long serialVersionUID
+crittercism.android.g:
+    private static int b(byte[],byte[])
+    static synthetic byte[] a()
+    static synthetic int a(byte[],byte[])
+    static synthetic byte[] a(byte[],byte[],int)
+crittercism.android.g$a
+crittercism.android.i:
+    public static java.lang.String a()
+    public final void b()
+    public final org.json.JSONObject c()
+    private static crittercism.android.i a(org.json.JSONObject)
+    public static crittercism.android.i d()
+crittercism.android.l:
+    public final org.json.JSONObject a()
+    public final void b()
+    public static crittercism.android.l c()
+crittercism.android.l$a
+crittercism.android.m:
+    public static java.lang.String a()
+    public final org.json.JSONObject b()
+    private static crittercism.android.m a(org.json.JSONObject)
+    public static crittercism.android.m c()
+    public final void a(java.lang.Throwable)
+    public final void d()

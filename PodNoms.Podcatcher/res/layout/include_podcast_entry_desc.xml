@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="horizontal">
+
+    <ImageView
+            android:id="@+id/include_podcast_entry_desc_image"
+            style="@style/ListItemImage"
+            android:layout_width="@dimen/list_item_thumbnail_width"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/podage"
+            android:scaleType="centerCrop"/>
+
+
+    <LinearLayout
+            android:id="@+id/include_podcast_entry_desc_list_item_session"
+            style="@style/ListItemContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/include_podcast_entry_desc_firstline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#c000"
+                android:fontFamily="sans-serif-contensed"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:lineSpacingMultiplier="0.85"
+                android:paddingBottom="4dp"
+                android:text="@string/boilerplate_short"/>
+
+        <TextView
+                android:id="@+id/include_podcast_entry_desc_secondline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#6000"
+                android:textAllCaps="true"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:text="@string/boilerplate_long"/>
+
+    </LinearLayout>
+
+</LinearLayout>

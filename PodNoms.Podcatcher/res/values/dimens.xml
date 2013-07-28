@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="colorstrip_height">6dp</dimen>
+    <dimen name="actionbar_compat_height">45dp</dimen>
+
+    <dimen name="body_padding_medium">10dp</dimen>
+    <dimen name="body_padding_large">10dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="star_button_padding">3dp</dimen>
+    <dimen name="player_button_padding">5dp</dimen>
+
+    <dimen name="list_item_thumbnail_width">80dp</dimen>
+    <dimen name="list_item_horiz_margin">10dp</dimen>
+    <dimen name="list_item_vert_margin">8dp</dimen>
+    <dimen name="detail_horiz_margin">16dp</dimen>
+</resources>

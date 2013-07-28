@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="@dimen/body_padding_medium"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TextView
+            style="@style/TextHeader"
+            android:text="@string/add_podcast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+        <EditText
+                android:id="@+id/txt_podcastUrl"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"/>
+
+        <ImageButton
+                android:id="@+id/cmd_addPodcast"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_add"
+                android:contentDescription="@string/add_podcast"/>
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/podcast_list"
+            android:listSelector="@drawable/list_selector"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_podcast_entry_download"
+            android:icon="@drawable/ic_action_download"
+            android:title="@string/download"/>
+    <item
+            android:id="@+id/menu_podcast_entry_marklistened"
+            android:icon="@drawable/ic_action_cancel"
+            android:title="@string/mark_listened"/>
+    <item
+            android:id="@+id/menu_podcast_entry_share"
+            android:icon="@drawable/ic_action_share"
+            android:title="@string/share"/>
+</menu>
